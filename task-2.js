@@ -2,23 +2,27 @@
 // вставит все li за одну операцию в список ul.ingredients.
 //  Для создания DOM-узлов используй document.createElement().
 const ingredients = ["Картошка", "Грибы", "Чеснок", "Помидоры", "Зелень", "Приправы"];
+console.table(ingredients)
 
-// const liRef = ingredients.map((elem) => document.createElement("li"));
-// let ulList = document.getElementById("ingredients");
-// const liRef = ingredients.forEach((ingredients) => {
-//   let item = document.createElement("li");
-//   items.innerHTML = ingredient;
-//   ulList.append(items);
-//   parent.append(...items);
-// });
-// console.log(liRef);
 
-let ulList = document.getElementById("ingredients");
-const foodIngredients = ingredients.forEach((ingredient) => {
-  let items = document.createElement("li");
-  items.innerHTML = ingredient;
-  ulList.append(items);
-  parent.append(...items);
-});
+// const ulRef = document.querySelector('#ingredients');
+const product = ingredient => {
+const liRef = document.createElement('li');
+liRef.textContent = ingredient;
+// ulRef.appendChild(liRef);
+return liRef;
+};
 
-console.log(foodIngredients);
+const productCard = ingredients.map(ingredient => product(ingredient));
+
+console.log(productCard);
+
+const productlistRef = document.querySelector('#ingredients');
+console.log(productlistRef);
+
+productlistRef.append(...ingredients);
+
+
+// ingredients.forEach(ingredient => {
+//   console.log(product(ingredient))  
+// })
