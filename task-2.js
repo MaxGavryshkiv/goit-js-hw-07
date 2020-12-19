@@ -24,5 +24,5 @@ productlistRef.append(...ingredients);
 
 
 // ingredients.forEach(ingredient => {
-//   console.log(product(ingredient))  
+//   console.log(product(ingredient))
 // })
