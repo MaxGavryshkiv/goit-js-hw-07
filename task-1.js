@@ -11,11 +11,7 @@ const totalCategoriesRef = document.querySelectorAll("li.item");
 console.log(totalCategoriesRef);
 console.log(`В списке ${totalCategoriesRef.length} категории.`);
 // // ====
-const categoriesRef = [...totalCategoriesRef]
-  .map(
-    (categories) => `Категория: ${categories.children[0].textContent}
-Количество элементов: ${categories.children[1].children.length}`
-  )
-  .join("\n");
-console.log(categoriesRef);
+const categoriesRef = totalCategoriesRef.forEach((categories) => console.log(`Категория: ${categories.children[0].textContent} 
+Количество элементов: ${categories.children[1].children.length}`))
+// console.log(categoriesRef);
 // ===============
