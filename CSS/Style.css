@@ -9,3 +9,11 @@
 #validation-input.invalid {
   border-color: #f44336;
 }
+.js-liRef {
+  list-style: none;
+  display: inline;
+  padding-right: 20px;
+}
+.js-liRef__img {
+  border-radius: 5%;
+}

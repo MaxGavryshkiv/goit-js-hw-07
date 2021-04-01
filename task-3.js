@@ -26,12 +26,10 @@ const images = [
 
 //   console.log(images);
 
-  const galleryRef = document.querySelector('#gallery');
-  const galeryCard = images.map(image =>{
-      const liRef = document.createElement('li');
-      const imgRef = document.createElement('img');
-      liRef.insertAdjacentHTML('afterbegin', `<img src = ${image.url} alt = '${image.alt}' width='200px'>`)
-        return liRef;
-    })
-  galleryRef.append(...galeryCard);
-  console.log(galleryRef)
+
+const galleryRef = document.querySelector('#gallery');
+const galeryCard = images.map(image => {
+    galleryRef.insertAdjacentHTML('afterbegin', `<li class = 'js-liRef'><img class = 'js-liRef__img' src = ${image.url} alt = '${image.alt}' width='200px'></li>`)
+})
+
+console.log(galleryRef)
