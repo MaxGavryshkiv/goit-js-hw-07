@@ -29,7 +29,21 @@ const images = [
 
 const galleryRef = document.querySelector('#gallery');
 const galeryCard = images.map(image => {
-    galleryRef.insertAdjacentHTML('afterbegin', `<li class = 'js-liRef'><img class = 'js-liRef__img' src = ${image.url} alt = '${image.alt}' width='200px'></li>`)
+  return image  
 })
 
+const image = galeryCard
+
+galleryRef.insertAdjacentHTML('afterbegin',
+ `<li class = 'js-liRef'>
+ <img class = 'js-liRef__img' src = ${image[0].url} alt = '${image[0].alt}' width='200px'>
+</li>
+<li class = 'js-liRef'>
+ <img class = 'js-liRef__img' src = ${image[1].url} alt = '${image[1].alt}' width='200px'>
+</li>
+<li class = 'js-liRef'>
+ <img class = 'js-liRef__img' src = ${image[2].url} alt = '${image[2].alt}' width='200px'>
+</li>
+
+`) 
 console.log(galleryRef)
